@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./style.css";
 import calendar from '../calendar/calendar.js'
 import TaskList  from "../navbar/components/Tasks List";  
+import Analytics from "./Analytics";
 
 
 const sidebarOptions = ["Timetable", "Task", "Analytics"];
@@ -36,7 +37,7 @@ export default function Dashboard() {
             case "Task":
               return <TaskList/>;
             case "Analytics":
-              return "Analytics";
+              return <Analytics/>;
             default:
               return null;
           }
