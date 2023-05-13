@@ -1,3 +1,4 @@
+// Logo component
 export default function Logo() {
-    return(<>GoTask</>)
-}
+    return <div className="logo">GoTask</div>;
+  }

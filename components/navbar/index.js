@@ -25,7 +25,6 @@ export default function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                 <Logo/>
-                {`Current Page: ${pageName}`}
                 <SignUp/>
             </div>
 
