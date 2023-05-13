@@ -10,8 +10,10 @@ export default function Tasks() {
         router.push("/Tasks")
     }
     return(
-        <button onClick={handleOnClick}>
+        <div className="className='container'">
+            <button onClick={handleOnClick}>
             Tasks
-        </button>
+            </button>
+        </div>
     )
 }
