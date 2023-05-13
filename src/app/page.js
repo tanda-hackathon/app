@@ -7,7 +7,7 @@ export default function Home() {
       <Navbar />
       <div className="landing-section">
         <video src="/images/Animation.mp4" autoPlay muted loop className="landing-video" style={{ width: "50%", height: "auto" }} />
-        <div className="landing-text">Welcome to our website!</div>
+        <div className="landing-text">GoTask - Automated calendar task automation and gamifying</div>
       </div>
     </div>
   );
