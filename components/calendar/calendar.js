@@ -8,7 +8,6 @@ import interactionPlugin from "@fullcalendar/interaction";
 export default function Calendar() {
   return (
     <div>
-      <>Calendar</>
       <Fullcalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"dayGridMonth"}
