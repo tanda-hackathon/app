@@ -23,7 +23,7 @@ export default function Dashboard() {
         <div className="sidebar">
             {sidebarOptions.map((option, index) => (
             <div className = "sidebar-button">
-            <button key={index} value={option} onClick={handleOnClick}>
+            <button key={index} value={option} onClick={handleOnClick} className="button-thingy">
                 {option}
             </button>
             </div>
