@@ -6,6 +6,7 @@ import SignUp from "./components/Signup";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 import "./style.css";
+import { useSelector } from "react-redux";
 
 const routeName = {
   "/": "Login",
@@ -18,6 +19,7 @@ export default function Navbar() {
   const CurrentPage = usePathname();
   const [pageName, setPageName] = useState();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const userCoins = useSelector((state) => state.user.point);
 
   useEffect(() => {
     setPageName(routeName[CurrentPage]);
@@ -32,7 +34,7 @@ export default function Navbar() {
   };
 
   const handleShopClick = () => {
-    console.log("Shop clicked");
+    router.push("/rewards");
   };
 
   const handleProfileMenuClick = () => {
@@ -40,7 +42,7 @@ export default function Navbar() {
   };
 
   const handleLogoutClick = () => {
-    console.log("Logout clicked");
+    router.push("/");
   };
 
   return (
@@ -56,8 +58,8 @@ export default function Navbar() {
           />
           {isDropdownOpen && (
             <div className="dropdown-content">
-              <div className="dropdown-item" onClick={handleCoinsClick}>
-                Coins
+              <div className="dropdown-item">
+                {`C: ${userCoins}`}
               </div>
               <div className="dropdown-item" onClick={handleShopClick}>
                 Shop

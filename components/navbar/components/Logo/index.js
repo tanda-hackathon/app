@@ -1,4 +1,10 @@
 // Logo component
+import { useRouter } from "next/navigation";
+
 export default function Logo() {
-    return <div className="logo">GoTask</div>;
+    const router = useRouter();
+    const handleOnClick = () => {
+      router.push("/calendar");
+    };
+    return <div className="logo" onClick={handleOnClick}>GoTask</div>;
   }
