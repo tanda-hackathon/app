@@ -46,8 +46,16 @@ const useFetch = () => {
             'maxResults': 15,
             'orderBy': 'startTime'
         }).then((response) => {
-            console.log(response.result)
-            setEvents(response.result.items);
+            const items = response.items;
+            const formattedEvents = items.map((item) => {
+                return {
+                    title: item.summary,
+                    start: item.start.dateTime || item.start.date,
+                    end: item.end.dateTime || item.end.date,
+                };
+            });
+            console.log(formattedEvents)
+            setEvents(formattedEvents);
         });
     };
 
