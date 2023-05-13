@@ -8,10 +8,7 @@
     background-color: #f1f1f1;
     padding: 20px;
   }
-  /* .button {
-    font-family: "Montserrat", sans-serif;
-    font-size: 28px;
-  } */
+
    .sidebar-button {
     background: none;
     color: inherir;
@@ -20,13 +17,8 @@
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    display: block;
-    font-family: "Montserrat", sans-serif;
-    font-size: 28px;
-    margin-bottom: 10px;
-
-  } 
-
+  }
+ 
   .sidebar-button:hover {
     background-color:   grey;
   }

@@ -1,172 +1,84 @@
 .navbar {
-    background: rgba(28, 27, 27, 0.5);
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position:sticky;
-    top: 0;
-    z-index: 999;
+    background-color: #162f7a9a;
+    position: fixed;
     backdrop-filter: blur(5px);
-    width: 100%;
+    width: 100vw;
+    padding: 16px;
   }
   
-.navbar-container {
+  .navbar-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    max-height: 80px;
-    height: 80px;
-    margin-left: 20px;
-    width: 100%;
-}
-
-.navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: -20px;
-    height: 60px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .page-name {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .signup-button,
+  .signout-button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-}
+    margin-left: 16px;
+  }
+  
+  .signup-button:hover,
+  .signout-button:hover {
+    background-color: #357ae8;
+  }
+  
+  .signup-button:active,
+  .signout-button:active {
+    background-color: #2b55c6;
+  }
 
-.fa-typo3 {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-}
-
-.nav-menu {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    list-style: none;
-    text-align: center;
-    width: 60vw;
-    justify-content: end;
-    margin-right: 2rem;
-}
-
-.nav-item {
-    height: 80px;
-}
-
-.nav-links {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    height: 100%;
-    font-size: 1rem;
-    justify-content: center;
-    text-align: center;
-}
-
-.space-small {
-    padding-top: 50px;
-}
-
-.nav-links:hover {
-    border-bottom: 4px solid #fff;
-    transition: all 0.2s ease-out;
-}
-
-.fa-bars {
-    color: #fff;
-}
-
-
-.menu-icon {
+  .profile-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 16px;
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
     display: none;
-}
-
-@media screen and (max-width: 960px) {
-    .NavbarItems {
-        position: relative;
-    }
-
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        background: rgba(28, 27, 27, 0.8);
-        width: 100%;
-        height: 90vh;
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        justify-content: flex-start;
-    }
-
-    .nav-menu.active {
-        background: rgba(28, 27, 27, 0.8);
-        backdrop-filter: blur(10px);
-        left: 0;
-        opacity: 1;
-        transition: all 0.8s ease;
-        z-index: 1;
-    }
-
-    .nav-links {
-        text-align: center;
-        padding: 2rem 0.7rem;
-        width: 100%;
-        display: table;
-        font-size: 1.2rem;
-    }
-
-    .nav-links:hover {
-        background-color: #fff;
-        color: #242424;
-        border-radius: 0;
-    }
-
-    .navbar-logo {
-        position: absolute;
-        height: 40px;
-        top: 0;
-        left: 30px;
-        transform: translate(25%, 50%);
-    }
-
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
-
-    .fa-times {
-        color: #fff;
-        font-size: 2rem;
-    }
-
-    .nav-links-mobile {
-        display: block;
-        text-align: center;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 80%;
-        text-decoration: none;
-        font-size: 1rem;
-        background-color: transparent;
-        color: #fff;
-        padding: 14px 20px;
-        border: 1px solid #fff;
-        transition: all 0.5s ease-out;
-    }
-
-    .nav-links-mobile:hover {
-        background: #fff;
-        color: #242424;
-        transition: 250ms;
-    }
-}
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-item {
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 20px;
+  }
+  
