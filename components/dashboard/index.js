@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./style.css";
 import calendar from '../calendar/calendar.js'
 import TaskList  from "../navbar/components/Tasks List";  
+import Analytics from "./Analytics";
 
 
 const sidebarOptions = ["Timetable", "Task", "Analytics"];
@@ -21,8 +22,8 @@ export default function Dashboard() {
     <div className="dashboard-container">
         <div className="sidebar">
             {sidebarOptions.map((option, index) => (
-            <div >
-            <button key={index} value={option} onClick={handleOnClick} className = "sidebar-button">
+            <div className = "sidebar-button">
+            <button key={index} value={option} onClick={handleOnClick} className="button-thingy">
                 {option}
             </button>
             </div>
@@ -36,7 +37,7 @@ export default function Dashboard() {
             case "Task":
               return <TaskList/>;
             case "Analytics":
-              return "Analytics";
+              return <Analytics/>;
             default:
               return null;
           }
