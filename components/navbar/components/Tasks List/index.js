@@ -1,44 +1,65 @@
-"use client";
+import React from 'react';
 
-import { useRouter } from "next/navigation";
+class TaskList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tasks: [],
+      taskInput: ''
+    };
+  }
 
-export default function TaskList() {
-    const [tasks, setTasks] = useState([]);
-    const [taskInput, setTaskInput] = useState('');
-  
-    const addTask = () => {
-      if (taskInput.trim() !== '') {
-        setTasks([...tasks, taskInput]);
-        setTaskInput('');
-      }
-    };
-  
-    const deleteTask = (index) => {
-      const updatedTasks = [...tasks];
-      updatedTasks.splice(index, 1);
-      setTasks(updatedTasks);
-    };
-  
+  addTask = () => {
+    const { taskInput, tasks } = this.state;
+    if (taskInput.trim() !== '') {
+      this.setState({
+        tasks: [...tasks, taskInput],
+        taskInput: ''
+      });
+    }
+  };
+
+  deleteTask = (index) => {
+    const { tasks } = this.state;
+    const updatedTasks = [...tasks];
+    updatedTasks.splice(index, 1);
+    this.setState({
+      tasks: updatedTasks
+    });
+  };
+
+  handleTaskInputChange = (e) => {
+    this.setState({
+      taskInput: e.target.value
+    });
+  };
+
+  render() {
+    const { tasks, taskInput } = this.state;
+
     return (
       <div>
         <h1>Task List</h1>
-  
+
         <input
           type="text"
           value={taskInput}
-          onChange={(e) => setTaskInput(e.target.value)}
+          onChange={this.handleTaskInputChange}
           placeholder="Enter task"
         />
-        <button onClick={addTask}>Add Task</button>
-  
+        <button onClick={this.addTask}>Add Task</button>
+
         <ul>
           {tasks.map((task, index) => (
             <li key={index}>
               {task}
-              <button onClick={() => deleteTask(index)}>Delete</button>
+              <button onClick={() => this.deleteTask(index)}>Delete</button>
             </li>
           ))}
         </ul>
       </div>
     );
   }
+}
+
+export default TaskList;
