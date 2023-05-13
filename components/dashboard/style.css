@@ -1,0 +1,25 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  .button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+  }
+  .sidebar-button {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 20px;
+  }
