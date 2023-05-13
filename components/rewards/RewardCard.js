@@ -1,11 +1,21 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { pointReduce } from "../../store/reducers/userSlice";
 
 const RewardCard = ({ reward }) => {
   const { imagePath, rewardName, coinsRequired, rewardDescription } = reward;
-
+  const dispatch = useDispatch();
+  const userPoint = useSelector((state) => state.user.point);
   const handleBuy = () => {
     // Handle buy functionality here
     console.log(`Buying ${rewardName}`);
+    if (userPoint - coinsRequired >= 0){
+
+      dispatch(pointReduce(coinsRequired))
+    }
+    else {
+      alert("Not enough coins")
+    }
   };
 
   return (
