@@ -6,6 +6,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import './calendar.css';
 
+
 export default function Calendar() {
   return (
     <div className="calendar-container">

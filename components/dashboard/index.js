@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import "./style.css";
 import calendar from '../calendar/calendar.js'
+import TaskList  from "../navbar/components/Tasks List";  
+
 
 const sidebarOptions = ["Timetable", "Task", "Analytics"];
 
@@ -32,7 +34,7 @@ export default function Dashboard() {
             case "Timetable":
               return calendar();
             case "Task":
-              return "Task";
+              return <TaskList/>;
             case "Analytics":
               return "Analytics";
             default:
