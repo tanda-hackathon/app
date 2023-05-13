@@ -1,8 +1,9 @@
+"use client";
+
 import React, {useState, useEffect} from 'react';
 import './Navbar.css';
-import {Link} from "react-router-dom";
+import {Link} from "next/link";
 import {Button} from "./Button";
-import techtitanslogo from '../images/techtitanslogo.png';
 
 function Navbar() {
     // toggle the hamburger menu and update the state
@@ -29,7 +30,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to="/" onClick={closeMobileMenu}>
-                    <img src={techtitanslogo} className="navbar-logo" alt="TechTitans Logo" />
+                    <img  className="navbar-logo" alt="TechTitans Logo" />
                 </Link>
                 <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                     ECHTITANS

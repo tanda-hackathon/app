@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const sidebarOptions = [
-    "Time Table", "Task", "Analytics"
+    "Timetable", "Task", "Analytics"
 ]
 export default function Dashboard(){
-    const [currentPageDashBoard, setCurrentPageDashBoard] = useState("Time Table")
+    const [currentPageDashBoard, setCurrentPageDashBoard] = useState("Timetable")
     const router = useRouter()
 
     const handleOnClick = (e) => {
@@ -26,7 +26,7 @@ export default function Dashboard(){
             })}
             {(() => {
                 switch(currentPageDashBoard) {
-                    case "Time Table": return "Time Table";
+                    case "Timetable": return "Timetable";
                     case "Task": return "Task";
                     case "Analytics": return "Analytics";
                 }
