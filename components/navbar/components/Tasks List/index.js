@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./style.css";
 class TaskList extends React.Component {
   constructor(props) {
     super(props);
@@ -60,6 +60,34 @@ class TaskList extends React.Component {
       </div>
     );
   }
+  render() {
+    const { tasks, taskInput } = this.state;
+
+    return (
+      <div>
+        <h1 className="task-list-title">Task List</h1>
+
+        <input
+          type="text"
+          value={taskInput}
+          onChange={this.handleTaskInputChange}
+          placeholder="Enter task"
+          className="task-input"
+        />
+        <button onClick={this.addTask} className="add-task-button">Add Task</button>
+
+        <ul className="task-list">
+          {tasks.map((task, index) => (
+            <li key={index} className="task-list-item">
+              <span className="task-text">{task}</span>
+              <button className="delete-button" onClick={() => this.deleteTask(index)}>Delete</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 }
+
 
 export default TaskList;
