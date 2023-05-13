@@ -55,7 +55,7 @@ export default function Navbar() {
         <Logo />
         <div className="profile-dropdown">
           <img
-            src="path/to/profile-image.jpg"
+            src="/images/profile.jpeg"
             alt="Profile"
             className="profile-image"
             onClick={handleProfileClick}
