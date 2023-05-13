@@ -4,6 +4,7 @@
     backdrop-filter: blur(5px);
     width: 100vw;
     padding: 16px;
+    z-index: 999;
   }
   
   .navbar-container {
@@ -60,6 +61,7 @@
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+    object-fit: cover;
   }
   
   .dropdown-content {
