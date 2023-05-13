@@ -41,6 +41,10 @@ export default function Navbar() {
     console.log("Profile menu clicked");
   };
 
+  const handleLeaderBoardClick = () => {
+    router.push("/leaderboard");
+  };
+
   const handleLogoutClick = () => {
     router.push("/");
   };
@@ -66,6 +70,9 @@ export default function Navbar() {
               </div>
               <div className="dropdown-item" onClick={handleProfileMenuClick}>
                 Profile
+              </div>
+              <div className="dropdown-item" onClick={handleLeaderBoardClick}>
+                Leaderboard
               </div>
               <div className="dropdown-item" onClick={handleLogoutClick}>
                 Logout
