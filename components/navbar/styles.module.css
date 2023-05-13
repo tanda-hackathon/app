@@ -1,0 +1,12 @@
+.text {
+    font-family: monospace, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.background {
+    filter: blur(2px);
+    -webkit-filter: blur(2px); 
+    position: absolute;
+    z-index: 1;
+    height:10% ;
+    width:100%;
+}

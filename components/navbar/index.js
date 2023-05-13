@@ -6,6 +6,8 @@ import SignUp from "./components/Signup"
 import { useRouter, usePathname } from 'next/navigation'
 import { useState } from "react";
 
+import styles from "./styles.module.css"
+
 const routeName = {
     "/": "Login",
     "/dashboard": "Dashboard",
@@ -22,6 +24,8 @@ export default function Navbar() {
     }, [CurrentPage])
     return(
         <div>
+            <div className={styles.background}>asjdlkasjdalskjdlkasjdl</div>
+            <div className={styles.text}> Something veryy wwweieierdd</div>
             <Logo/>
             {`Current Page: ${pageName}`}
             <SignUp/>
