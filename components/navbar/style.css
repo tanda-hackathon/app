@@ -46,4 +46,37 @@
   .signout-button:active {
     background-color: #2b55c6;
   }
+
+  .profile-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 16px;
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-item {
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 20px;
+  }
   

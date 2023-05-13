@@ -7,7 +7,7 @@
         "rewardDescription": "Enjoy a delicious free lunch at the workplace cafeteria."
       },
       {
-        "imagePath": "./images/day_off.jpg",
+        "imagePath": "./images/images/day_off.jpg",
         "rewardName": "1 Day Off",
         "coinsRequired": 1000,
         "rewardDescription": "Take a well-deserved break with an extra day off from work."

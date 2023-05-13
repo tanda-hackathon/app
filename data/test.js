@@ -1,1 +1,1 @@
-import '../data/images/day_off.jpg';
+import './images/day_off.jpg'
