@@ -506,7 +506,7 @@ export default function Calendar() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       calendar_ref.current.style.visibility = 'visible';
-    }, 10000);
+    }, 15000);
 
     return () => clearTimeout(timeoutId);
   }, []);
